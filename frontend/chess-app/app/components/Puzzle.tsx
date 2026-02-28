@@ -228,12 +228,12 @@ export default function Puzzle({ puzzle, onComplete, onFail, onSkip }: PuzzlePro
     }
 
     return (
-        <div className="flex flex-col items-center gap-2 md:gap-4 w-full h-full justify-center select-none touch-none">
+        <div className="flex flex-col items-center gap-2 md:gap-4 w-full h-full justify-center select-none touch-none pb-8 md:pb-0">
             {/* Top Info Pill */}
             <div className="flex w-full max-w-full sm:max-w-[600px] justify-between items-end px-2 sm:px-0 -mb-2 md:-mb-3 z-10 w-full relative">
 
                 {/* Moves History Floating Above Board */}
-                <div className="flex gap-1.5 items-center overflow-x-auto whitespace-nowrap hide-scrollbar pb-1 max-w-[65%]">
+                <div className="flex gap-1.5 items-center overflow-x-auto whitespace-nowrap hide-scrollbar pb-1 max-w-full">
                     {moveHistory.map((move, i) => (
                         <span key={i} className={`px-2 py-1 text-xs md:text-sm font-bold rounded-md shadow-sm border border-white/5 ${move.isComputer
                             ? "bg-indigo-500/20 text-indigo-300" // Primary/Computer color
@@ -248,13 +248,6 @@ export default function Puzzle({ puzzle, onComplete, onFail, onSkip }: PuzzlePro
                         </span>
                     )}
                 </div>
-
-                {puzzle && (
-                    <div className="flex flex-col items-end">
-                        <span className="text-[10px] md:text-xs text-white/50 uppercase tracking-widest">Rating</span>
-                        <span className="font-mono font-bold text-sm md:text-base text-yellow-400">{puzzle.Rating}</span>
-                    </div>
-                )}
             </div>
 
             <div className="w-full max-w-full sm:max-w-[600px] max-h-[60vh] sm:max-h-full aspect-square shadow-[0_0_40px_rgba(0,0,0,0.3)] rounded-md sm:rounded-xl overflow-hidden border border-white/10 bg-[#1a1c20] relative touch-none flex-shrink z-20">
@@ -303,6 +296,6 @@ export default function Puzzle({ puzzle, onComplete, onFail, onSkip }: PuzzlePro
             <div className="flex w-full max-w-full sm:max-w-[600px] justify-between items-start px-2 sm:px-0 -mt-2 md:-mt-3 z-10 w-full mb-8">
                 <div className="flex-1" />
             </div>
-        </div>
+        </div >
     );
 }

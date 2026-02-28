@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 
 export default function Navbar() {
@@ -10,36 +11,27 @@ export default function Navbar() {
         { name: "Puzzles", href: "/puzzles" },
         { name: "Tournament", href: "/tournament" },
         { name: "Videos", href: "/videos" },
-        { name: "Sponsors", href: "/sponsors" },
+        { name: "Partners", href: "/sponsors" },
         { name: "Shop", href: "/shop" },
     ];
 
     return (
-        <nav className="sticky top-0 z-50 w-full border-b border-white/10 bg-[#1a1c20]/80 dark:bg-[#1a1c20]/80 bg-white/80 backdrop-blur-md transition-colors duration-300">
+        <nav className="sticky top-0 z-50 w-full border-b border-white/10 bg-[#1a1c20]/80 backdrop-blur-md transition-colors duration-300">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-16">
                     {/* Logo */}
                     <div className="flex-shrink-0">
                         <Link href="/" className="flex items-center gap-2">
-                            {/* Simple Chess Icon SVG */}
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                className="h-8 w-8 text-emerald-500"
-                            >
-                                <path d="M12 2c-.6 0-1.2.2-1.6.6l-1 1.4h5.2l-1-1.4c-.4-.4-1-.6-1.6-.6z" />
-                                <path d="M9 16a3 3 0 1 1 6 0v1a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 17v-1z" />
-                                <path d="M12 4v4" />
-                                <path d="M6.5 17h11" />
-                                <path d="M5.1 20.3a2 2 0 1 0 2.8 2.8" />
-                                <path d="M16.1 20.3a2 2 0 1 0 2.8 2.8" />
-                            </svg>
-                            <span className="font-bold text-xl tracking-tight text-white dark:text-white text-gray-900">
+                            <div className="relative w-8 h-8 md:w-10 md:h-10">
+                                <Image
+                                    src="/logo.png"
+                                    alt="ChessOn Logo"
+                                    fill
+                                    className="object-contain"
+                                    priority
+                                />
+                            </div>
+                            <span className="font-bold text-xl tracking-tight text-white">
                                 Chess<span className="text-emerald-500">On</span>
                             </span>
                         </Link>
@@ -52,7 +44,7 @@ export default function Navbar() {
                                 <Link
                                     key={link.name}
                                     href={link.href}
-                                    className="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 transition-all duration-200 dark:text-gray-300 dark:hover:text-white text-gray-700 hover:text-black hover:bg-black/5"
+                                    className="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 transition-all duration-200"
                                 >
                                     {link.name}
                                 </Link>
@@ -109,13 +101,13 @@ export default function Navbar() {
 
             {/* Mobile Menu */}
             {isMenuOpen && (
-                <div className="md:hidden bg-[#1a1c20] dark:bg-[#1a1c20] bg-white border-b border-white/10">
+                <div className="md:hidden bg-[#1a1c20] border-b border-white/10">
                     <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                         {navLinks.map((link) => (
                             <Link
                                 key={link.name}
                                 href={link.href}
-                                className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 dark:text-gray-300 dark:hover:text-white text-gray-700 hover:text-black hover:bg-gray-200"
+                                className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700"
                                 onClick={() => setIsMenuOpen(false)}
                             >
                                 {link.name}

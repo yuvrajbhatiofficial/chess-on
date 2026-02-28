@@ -17,14 +17,14 @@ const products = [
         image: "https://images.unsplash.com/photo-1528819622765-d6bcf132f793?auto=format&fit=crop&q=80&w=800",
         affiliateLink: "#",
     },
-    {
-        id: 3,
-        title: "Bobby Fischer Teaches Chess",
-        description: "The best-selling chess book of all time. A must-read for beginners and experts alike.",
-        price: "$15.99",
-        image: "https://images.unsplash.com/photo-1590846406792-0adc7f928f1e?auto=format&fit=crop&q=80&w=800",
-        affiliateLink: "#",
-    },
+    // {
+    //     id: 3,
+    //     title: "Bobby Fischer Teaches Chess",
+    //     description: "The best-selling chess book of all time. A must-read for beginners and experts alike.",
+    //     price: "$15.99",
+    //     image: "https://images.unsplash.com/photo-1590846406792-0adc7f928f1e?auto=format&fit=crop&q=80&w=800",
+    //     affiliateLink: "#",
+    // },
     {
         id: 4,
         title: "Magnetic Travel Chess Set",

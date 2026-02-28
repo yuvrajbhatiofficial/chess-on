@@ -69,7 +69,7 @@ export default function VideosPage() {
             <div className="max-w-7xl mx-auto">
                 <div className="text-center mb-16">
                     <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                        Premium Chess <span className="text-blue-500">Content</span>
+                        Premium Chess <span className="text-emerald-500">Content</span>
                     </h1>
                     <p className="text-gray-400 max-w-2xl mx-auto text-lg">
                         Watch masterclasses, game analysis, and strategy guides from top grandmasters right here.
@@ -100,6 +100,54 @@ export default function VideosPage() {
                             </div>
                         </div>
                     ))}
+                </div>
+
+                {/* Partners Footer */}
+                <div className="mt-24 border-t border-white/10 pt-16">
+                    <h2 className="text-3xl font-bold text-white text-center mb-12">
+                        Follow our <span className="text-emerald-500">video partners</span>
+                    </h2>
+
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                        {/* Chessneurons */}
+                        <div className="bg-[#1a1c20] p-6 rounded-2xl border border-white/5 flex flex-col items-center text-center group hover:border-emerald-500/30 transition-all">
+                            <h3 className="text-xl font-bold text-white mb-6">Chessneurons</h3>
+                            <div className="flex gap-4">
+                                <a href="https://www.instagram.com/chessneurons?igsh=MXhneDZxcXBrc3FmZbQ==" target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-pink-500/10 text-pink-500 rounded-lg hover:bg-pink-500 hover:text-white transition-colors duration-300 font-medium text-sm flex items-center gap-2">
+                                    Instagram
+                                </a>
+                                <a href="https://youtube.com/@chessneurons?si=DO0HbFfB59ursu-w" target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-red-500/10 text-red-500 rounded-lg hover:bg-red-500 hover:text-white transition-colors duration-300 font-medium text-sm flex items-center gap-2">
+                                    YouTube
+                                </a>
+                            </div>
+                        </div>
+
+                        {/* Suyog wagh */}
+                        <div className="bg-[#1a1c20] p-6 rounded-2xl border border-white/5 flex flex-col items-center text-center group hover:border-emerald-500/30 transition-all">
+                            <h3 className="text-xl font-bold text-white mb-6">IM Suyog Wagh</h3>
+                            <div className="flex gap-4">
+                                <a href="https://www.instagram.com/imsuyogwagh?igsh=cml3dndpNjM5eHl4" target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-pink-500/10 text-pink-500 rounded-lg hover:bg-pink-500 hover:text-white transition-colors duration-300 font-medium text-sm flex items-center gap-2">
+                                    Instagram
+                                </a>
+                                <a href="https://youtube.com/@imsuyogwagh?si=Yhm3mXBEMnDiAZub" target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-red-500/10 text-red-500 rounded-lg hover:bg-red-500 hover:text-white transition-colors duration-300 font-medium text-sm flex items-center gap-2">
+                                    YouTube
+                                </a>
+                            </div>
+                        </div>
+
+                        {/* LearnchesswithDimple */}
+                        <div className="bg-[#1a1c20] p-6 rounded-2xl border border-white/5 flex flex-col items-center text-center group hover:border-emerald-500/30 transition-all">
+                            <h3 className="text-xl font-bold text-white mb-6">LearnchesswithDimple</h3>
+                            <div className="flex gap-4">
+                                <a href="https://www.instagram.com/learnchesswithdimple?igsh=dXlieXpuZzFtZzZz" target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-pink-500/10 text-pink-500 rounded-lg hover:bg-pink-500 hover:text-white transition-colors duration-300 font-medium text-sm flex items-center gap-2">
+                                    Instagram
+                                </a>
+                                <a href="https://youtube.com/@learnchesswithdimple?si=MemdwjvsICXHXASK" target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-red-500/10 text-red-500 rounded-lg hover:bg-red-500 hover:text-white transition-colors duration-300 font-medium text-sm flex items-center gap-2">
+                                    YouTube
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

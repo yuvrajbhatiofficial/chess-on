@@ -52,13 +52,10 @@ export default function PuzzleGame({ puzzles }: { puzzles: PuzzleData[] }) {
         <div className="flex flex-col items-center justify-center h-[100dvh] w-full bg-gradient-to-br from-[#1a1c20] to-[#0f1012] text-white p-2 md:p-4 overflow-hidden">
             <div className="w-full max-w-4xl flex flex-col items-center gap-2 md:gap-8 h-full">
                 <header className="w-full flex gap-4 justify-between items-center shrink-0 pt-2 md:pt-4 px-4 z-10">
-                    <div className="flex items-center gap-2">
-                        <div className="w-8 h-8 rounded-full bg-emerald-500/20 flex items-center justify-center border border-emerald-500/30">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" className="text-emerald-400" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10" /><path d="m9 12 2 2 4-4" />
-                            </svg>
-                        </div>
-                        <h1 className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-white/60">Tactics</h1>
+                    <div className="flex items-center gap-2 max-w-[70%]">
+                        <p className="text-[10px] md:text-xs italic text-gray-500/60 font-medium leading-relaxed uppercase tracking-wider">
+                            "Chess is 99% tactics and even the remaining....1% is still depends on tactics"
+                        </p>
                     </div>
                     <button
                         onClick={handleNext}
