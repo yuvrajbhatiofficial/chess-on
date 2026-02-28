@@ -23,12 +23,10 @@ export default function Navbar() {
                     <div className="flex-shrink-0">
                         <Link href="/" className="flex items-center gap-2">
                             <div className="relative w-8 h-8 md:w-10 md:h-10">
-                                <Image
+                                <img
                                     src="/logo.png"
                                     alt="ChessOn Logo"
-                                    fill
-                                    className="object-contain"
-                                    priority
+                                    className="w-full h-full object-contain"
                                 />
                             </div>
                             <span className="font-bold text-xl tracking-tight text-white">
