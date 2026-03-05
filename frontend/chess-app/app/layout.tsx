@@ -23,7 +23,8 @@ export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
-}>) {
+}
+>) {
   return (
     <html lang="en" className="dark" suppressHydrationWarning>
       <body
@@ -31,6 +32,7 @@ export default function RootLayout({
       >
         <Navbar />
         {children}
+         <Analytics />
       </body>
     </html>
   );
