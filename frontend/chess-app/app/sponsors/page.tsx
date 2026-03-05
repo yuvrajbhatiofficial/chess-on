@@ -2,7 +2,7 @@ export default function SponsorsPage() {
     return (
         <div className="flex flex-col items-center justify-center min-h-[80vh] bg-[#1a1c20] text-center px-4">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Our <span className="text-purple-500">Partners</span>
+                Our <span className="text-purple-500">supporters</span>
             </h1>
             <p className="text-gray-400 max-w-2xl text-lg mb-12">
                 We are proud to be supported by leading organizations in the chess and tech world.
