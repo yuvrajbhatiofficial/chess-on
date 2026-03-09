@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback, useEffect } from "react";
+import { useState, useCallback, useEffect, useMemo } from "react";
 import Puzzle from "./Puzzle";
 
 interface PuzzleData {
@@ -15,11 +15,25 @@ export default function PuzzleGame({ puzzles }: { puzzles: PuzzleData[] }) {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isMounted, setIsMounted] = useState(false);
 
+    const sortedPuzzles = useMemo(() => {
+        return [...puzzles].sort((a, b) => a.Rating - b.Rating);
+    }, [puzzles]);
+
     // Prevent scrolling when on puzzle page
     useEffect(() => {
         setIsMounted(true);
-        if (puzzles.length > 0) {
-            setCurrentIndex(Math.floor(Math.random() * puzzles.length));
+        if (sortedPuzzles.length > 0) {
+            const savedIndex = localStorage.getItem("chessPuzzleProgress");
+            if (savedIndex !== null) {
+                const parsed = parseInt(savedIndex, 10);
+                if (!isNaN(parsed) && parsed >= 0 && parsed < sortedPuzzles.length) {
+                    setCurrentIndex(parsed);
+                } else {
+                    setCurrentIndex(0);
+                }
+            } else {
+                setCurrentIndex(0);
+            }
         }
 
         const originalStyle = window.getComputedStyle(document.body).overflow;
@@ -36,17 +50,20 @@ export default function PuzzleGame({ puzzles }: { puzzles: PuzzleData[] }) {
             document.body.style.width = "";
             document.body.style.height = "";
         };
-    }, [puzzles.length]);
+    }, [sortedPuzzles.length]);
 
     const handleNext = useCallback(() => {
-        if (puzzles.length > 0) {
-            setCurrentIndex(Math.floor(Math.random() * puzzles.length));
-        }
-    }, [puzzles.length]);
+        setCurrentIndex(prev => {
+            if (sortedPuzzles.length === 0) return 0;
+            const nextIndex = (prev + 1) % sortedPuzzles.length;
+            localStorage.setItem("chessPuzzleProgress", nextIndex.toString());
+            return nextIndex;
+        });
+    }, [sortedPuzzles.length]);
 
     if (!isMounted) return null;
 
-    const currentPuzzle = puzzles[currentIndex];
+    const currentPuzzle = sortedPuzzles[currentIndex];
 
     return (
         <div className="flex flex-col items-center justify-center h-[100dvh] w-full bg-gradient-to-br from-[#1a1c20] to-[#0f1012] text-white p-2 md:p-4 overflow-hidden">
