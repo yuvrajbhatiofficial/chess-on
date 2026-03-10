@@ -11,8 +11,8 @@ export default function Navbar() {
         { name: "Puzzles", href: "/puzzles" },
         { name: "Tournament", href: "/tournament" },
         { name: "Videos", href: "/videos" },
-        { name: "supporters", href: "/sponsors" },
         { name: "Shop", href: "/shop" },
+        { name: "supporters", href: "/sponsors" },
     ];
 
     return (

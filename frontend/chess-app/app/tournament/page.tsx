@@ -35,6 +35,22 @@ const tournaments = [
             { label: "Accommodation", value: "Free dormitory for playing 5+ events (book by Mar 25)." },
             { label: "Special", value: "Free Gala Dinner Party for all on March 29." }
         ]
+    },
+    {
+        id: 3,
+        title: "Shakti Grandeur 9.0 International Open FIDE Rating Chess Tournament 2026",
+        date: "April 20th to April 26th, 2026",
+        location: "Shakti Greens & Banquets, Vadodara",
+        prizePool: "₹11,00,000",
+        pdfLink: "https://drive.google.com/file/d/1tbJEOUhS0OA0pjca9y-bWuAsP0s4mD_6/view?usp=sharing",
+        details: [
+            { label: "Formats", value: "Classical, Rapid, and Blitz under FIDE Laws with a 9-round Swiss System." },
+            { label: "Time Control", value: "Classical: 90m + 30s. Rapid: 20m + 5s. Blitz: 3m + 2s." },
+            { label: "Entry Fee", value: "Combo: ₹4,000 by Mar 31 (₹5,000 after). Indiv: Classical ₹2k, Rapid ₹2k, Blitz ₹500. Free for GMs/IMs/WGMs/WIMs." },
+            { label: "Eligibility", value: "Valid 2026-2027 AICF & GSCA registration required." },
+            { label: "Rules", value: "No electronic devices. Prizes not shared. Winners must be present." },
+            { label: "Contact", value: "Mr. Dhruvik Shah (Tournament Director)" }
+        ]
     }
 ];
 
