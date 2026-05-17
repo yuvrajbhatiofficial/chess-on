@@ -5,51 +5,34 @@ import React, { useState } from "react";
 const tournaments = [
     {
         id: 1,
-        title: "2nd SkillCraft International Below 1800 Classical",
-        date: "27th to 29th March 2026",
-        location: "Thyagraj Sports Complex, Delhi",
-        prizePool: "₹15,00,000",
-        pdfLink: "https://drive.google.com/file/d/1vqs1dUhKVghx-l-HnULDXnib8NIJG2d8/view?usp=share_link",
+        title: "Shri Dhanpat Rai Sachdeva Memorial International Chess Festival",
+        date: "May 17th to 24th, 2026",
+        location: "Marina Dreams Banquets, New Delhi",
+        prizePool: "₹27,22,000",
+        pdfLink: "https://drive.google.com/file/d/18zA4V_5NgYa7YV8e5VDdV01LBJtp0XsA/view?usp=sharing",
         details: [
-            { label: "Prizes", value: "Over 100 cash prizes, 125+ trophies. 1st Top 5: ₹1,11,000, 2nd ₹70,000, 3rd ₹50,000." },
-            { label: "System of Play", value: "FIDE Swiss System with 9 rounds." },
-            { label: "Time Control", value: "30 Mins + 30 Secs increment." },
-            { label: "Eligibility", value: "Max rating 1799 in last 36 months. Unrated eligible." },
-            { label: "Entry Fee", value: "₹5,500 (Late fee ₹500 from March 21)." },
-            { label: "Reporting Time", value: "09:00 AM on 27th March 2026." },
-            { label: "Contact", value: "Teamskillcraft@skillcraft.co.in" }
+            { label: "Events", value: "Open FIDE Rated (May 17-21: ₹14,01,000) & Below 1800 (May 22-24: ₹13,21,000)." },
+            { label: "Coaching Camp", value: "GM Coaching Camp by GM Pravin Thipsay (May 25-27, 2026)." },
+            { label: "Rules", value: "FIDE Laws & Swiss System. Electronic devices strictly prohibited." },
+            { label: "Eligibility", value: "AICF registration is mandatory for all tournament participants." },
+            { label: "Membership", value: "Lifetime Membership for ₹5,100 (15% off entry, 50% off GM camp)." },
+            { label: "Registration", value: "Register online at raisahabcouncil.com." }
         ]
     },
     {
         id: 2,
-        title: "2nd Grand RCC FIDE Rated Chess Festival",
-        date: "March 27 to April 1, 2026",
-        location: "St. Theresas School, Mangalore",
-        prizePool: "₹14,00,001",
-        pdfLink: "https://drive.google.com/file/d/1tPNySFOzX_TTJiuYNo8wj-uCMPpNr-06/view?usp=share_link",
+        title: "RCC-Khannur Chess Festival",
+        date: "July 24th to 26th, 2026",
+        location: "Achuth Pai Hall, Mangalore",
+        prizePool: "₹8,25,000",
+        pdfLink: "https://drive.google.com/file/d/1lxoI4M-8KWxKbxx3jDAJ0t3ZkbJYyB33/view?usp=sharing",
         details: [
-            { label: "Events", value: "Classical, Rapid A, Blitz A & B, Chess 960, Puzzle Solving." },
-            { label: "Classical Dates", value: "March 27 to April 1." },
-            { label: "Entry Fee", value: "Combo fee ₹5,500. Free for GMs/IMs/WGMs/WIMs." },
-            { label: "Grand Prix Prize", value: "₹4,00,000 based on points across all 6 tournaments." },
-            { label: "Accommodation", value: "Free dormitory for playing 5+ events (book by Mar 25)." },
-            { label: "Special", value: "Free Gala Dinner Party for all on March 29." }
-        ]
-    },
-    {
-        id: 3,
-        title: "Shakti Grandeur 9.0 International Open FIDE Rating Chess Tournament 2026",
-        date: "April 20th to April 26th, 2026",
-        location: "Shakti Greens & Banquets, Vadodara",
-        prizePool: "₹11,00,000",
-        pdfLink: "https://drive.google.com/file/d/1tbJEOUhS0OA0pjca9y-bWuAsP0s4mD_6/view?usp=sharing",
-        details: [
-            { label: "Formats", value: "Classical, Rapid, and Blitz under FIDE Laws with a 9-round Swiss System." },
-            { label: "Time Control", value: "Classical: 90m + 30s. Rapid: 20m + 5s. Blitz: 3m + 2s." },
-            { label: "Entry Fee", value: "Combo: ₹4,000 by Mar 31 (₹5,000 after). Indiv: Classical ₹2k, Rapid ₹2k, Blitz ₹500. Free for GMs/IMs/WGMs/WIMs." },
-            { label: "Eligibility", value: "Valid 2026-2027 AICF & GSCA registration required." },
-            { label: "Rules", value: "No electronic devices. Prizes not shared. Winners must be present." },
-            { label: "Contact", value: "Mr. Dhruvik Shah (Tournament Director)" }
+            { label: "Formats", value: "Classical (30m+30s), Rapid (10m+3s), Blitz (3m+2s) & Puzzle Racer." },
+            { label: "Grand Prix", value: "Points system across all 4 events for additional cash prizes." },
+            { label: "Rules", value: "FIDE Laws & Swiss system. Electronic devices & watches are prohibited." },
+            { label: "Eligibility", value: "AICF registration required (and KSCA for Karnataka players)." },
+            { label: "Prizes", value: "Eligible for one higher prize only. Team prizes for 5+ entries." },
+            { label: "Additional", value: "Discounts for veterans & specially-abled. Food available at venue." }
         ]
     }
 ];
